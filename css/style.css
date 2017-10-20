@@ -5,7 +5,6 @@
         -moz-transition: none !important;
         -ms-transition: none !important;
         -o-transition: none !important;
-        
            }
     /* Logo for page loading*/
     .mainstreamloading {
@@ -16,23 +15,25 @@
             transform: translate(-50%, -50%);
             width: 2em;
             opacity: .2;
-                }
-    /* Animation for M*/
+        }
+    
+        /* Animation for M*/
         .mainstream {
-            height: 10em;
+            height: 17em;
             left: 50%;
             position: absolute;
-            top: 40%;
+            top: 53%;
             transform: translate(-50%, -50%);
-            width: 30em;
+            width: 34em;
         }
            
         .logo {
             position: absolute;
-            top: -0.75em;
+            top: -0.75em;}
+        .logo {
             animation: logo 8s ease-in-out;
             animation-iteration-count: 1;
-        }
+            }
     /* Keyframes */
     
     @keyframes logo {
@@ -60,7 +61,7 @@
         }
         
         img {
-            width: 50%;
+            width: 95%;
         }
         
         .img-circle {
@@ -131,6 +132,7 @@
         body {
             background: black;
             /*url(https://i.imgur.com/3nM3maK.jpg);*/
+            overflow: hidden;
         }
         
         /*** Media queries for adjusting to different screen sizes ***/
