@@ -1,0 +1,23 @@
+{
+  "name": "mnstrm",
+  "version": "1.0.0",
+  "description": "mainstreamnails.com by enavu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mainstreamnails/mnstrm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mainstreamnails/mnstrm/issues"
+  },
+  "homepage": "https://github.com/mainstreamnails/mnstrm#readme",
+  "devDependencies": {
+    "jslint": "^0.11.0"
+  }
+}

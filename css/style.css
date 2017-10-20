@@ -1,0 +1,148 @@
+
+    /* Code to do animation after page load*/
+    .preload {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        
+           }
+    /* Logo for page loading*/
+    .mainstreamloading {
+            height: 2em;
+            left: 50%;
+            position: absolute;
+            top: 53%;
+            transform: translate(-50%, -50%);
+            width: 2em;
+            opacity: .2;
+                }
+    /* Animation for M*/
+        .mainstream {
+            height: 10em;
+            left: 50%;
+            position: absolute;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            width: 30em;
+        }
+           
+        .logo {
+            position: absolute;
+            top: -0.75em;
+            animation: logo 8s ease-in-out;
+            animation-iteration-count: 1;
+        }
+    /* Keyframes */
+    
+    @keyframes logo {
+        100% {
+            opacity: 0;
+            transform: scale(1.5) translateY(-0.75em);
+        }
+        89% {
+            opacity: .7;
+        }
+        40% {
+            opacity: .5;
+            transform: scale(1);
+        }
+        0% {
+            opacity: 0;
+            transform: translateZ(-1000em);
+        }
+    }
+    /* Make the 3D work on the container */
+    
+    .mainstream {
+        perspective: 800px;
+        transform-style: preserve3d;
+        }
+        
+        img {
+            width: 50%;
+        }
+        
+        .img-circle {
+            border-radius: 50%;
+        }
+        
+        #close {
+            display: none;
+        }
+        
+        #text {
+            display: none;
+        }
+        
+        .vertical-text {
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            background: white;
+            color: white;
+            transform: rotate(90deg);
+            transform-origin: left top 0;
+        }
+        
+        .nav-about-line {
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            width: 2px;
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: white;
+            background-color: currentColor;
+            pointer-events: none;
+            height: 30px;
+        }
+        
+        .nav-work {
+            top: 25px;
+            right: 50px;
+        }
+        
+        .nav-item {
+            position: absolute;
+            z-index: 100;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-size: 0.78571rem;
+            line-height: 2.27273;
+            letter-spacing: 0.11em;
+            font-weight: 700;
+        }
+        
+        .link-brand-inner {
+            color: white
+        }
+        
+        .nav-about {
+            left: 25px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+               
+       
+        
+        /* General styles and layout */
+        
+        body {
+            background: black;
+            /*url(https://i.imgur.com/3nM3maK.jpg);*/
+        }
+        
+        /*** Media queries for adjusting to different screen sizes ***/
+        
+        @media only screen and (max-width: 600px) {
+            .mainstream {
+                font-size: 10px;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .mainstream {
+                font-size: 7px;
+            }
+        }
