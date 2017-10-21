@@ -198,18 +198,18 @@ body {
 
 @keyframes logo {
     100% {
-        opacity: 0;
+        opacity: 1;
         transform: scale(1.3) translateY(-.75em);
     }
     89% {
-        opacity: .7;
+        opacity: 1;
     }
     40% {
-        opacity: .5;
+        opacity: 1;
         transform: scale(1);
     }
     0% {
-        opacity: 0;
+        opacity: 1;
         transform: translateZ(-1000em);
     }
 }
@@ -220,6 +220,70 @@ body {
 .mainstream {
     perspective: 800px;
     transform-style: preserve3d;
+}
+
+.nav-logo {
+    position: absolute;
+    z-index: 100;
+    left: 24px;
+    top: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 22px;
+    font-size: 1.57143rem;
+    line-height: 1
+}
+
+.page-hero .nav-logo {
+    color: #fff
+}
+
+@media screen and (max-width: 599px) {
+    .nav-logo {
+        display: none
+    }
+    .page-hero .nav-logo {
+        display: inline-block
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .page-archive .nav-logo {
+        display: none
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nav-logo {
+        left: 27px;
+        top: 25px;
+        font-size: 26px;
+        font-size: 1.85714rem
+    }
+}
+
+.nav-slogan {
+    position: absolute;
+    font-size: 10px;
+    font-size: 0.71429rem;
+    line-height: 1;
+    letter-spacing: 0.11em;
+    left: 0;
+    top: 24px;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+@media screen and (min-width: 600px) {
+    .nav-slogan {
+        font-size: 11px;
+        font-size: 0.78571rem;
+        line-height: 1;
+        left: 100%;
+        margin-left: 18px;
+        top: 3px;
+        white-space: nowrap
+    }
 }
 
 img {
