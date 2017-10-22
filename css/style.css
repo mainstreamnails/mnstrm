@@ -142,7 +142,11 @@ html {
 
 body {
     min-height: 100%;
-    font-family: 'roboto', Arial, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+a {
+    color: white;
 }
 
 
