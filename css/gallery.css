@@ -1,0 +1,267 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: 'Lato', Arial, sans-serif;
+    background: black;
+}
+
+a {
+    color: white;
+}
+
+.nav-logo {
+    position: absolute;
+    z-index: 100;
+    left: 24px;
+    top: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 22px;
+    font-size: 1.57143rem;
+    line-height: 1
+}
+
+.galleryphotos {
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.galeryrow {
+    height: 300px;
+    overflow: hidden;
+}
+
+.no-gutter>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.page-hero .nav-logo {
+    color: #fff
+}
+
+.soon {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 22px;
+    font-size: 1.57143rem;
+    color: white;
+}
+
+@media screen and (max-width: 599px) {
+    .nav-logo {
+        display: none
+    }
+    .page-hero .nav-logo {
+        display: inline-block
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .page-archive .nav-logo {
+        display: none
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nav-logo {
+        left: 27px;
+        top: 25px;
+        font-size: 26px;
+        font-size: 1.85714rem
+    }
+}
+
+.nav-slogan {
+    position: absolute;
+    font-size: 10px;
+    font-size: 0.71429rem;
+    line-height: 1;
+    letter-spacing: 0.11em;
+    left: 0;
+    top: 24px;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+@media screen and (min-width: 600px) {
+    .nav-slogan {
+        font-size: 11px;
+        font-size: 0.78571rem;
+        line-height: 1;
+        left: 100%;
+        margin-left: 18px;
+        top: 3px;
+        white-space: nowrap
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.galleryphotos {
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.galleryrow {
+    height: 500px;
+    overflow: hidden;
+}
+
+.no-gutter>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}

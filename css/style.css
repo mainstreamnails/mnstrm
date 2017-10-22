@@ -239,6 +239,26 @@ a {
     line-height: 1
 }
 
+.galleryphotos {
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.galeryrow {
+    height: 300px;
+    overflow: hidden;
+}
+
+.no-gutter>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .page-hero .nav-logo {
     color: #fff
 }
