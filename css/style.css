@@ -200,8 +200,8 @@ a {
 
 @keyframes logo {
     100% {
-        opacity: 0;
-        transform: scale(20);
+        opacity: 1;
+        transform: scale(10);
     }
     0% {
         opacity: 1;
@@ -239,6 +239,13 @@ a {
     font-size: 22px;
     font-size: 1.57143rem;
     color: white;
+}
+
+@media screen and (min-width: 375px) {
+    .soon {
+        font-size: 22px;
+        font-size: 1rem
+    }
 }
 
 @media screen and (max-width: 599px) {
