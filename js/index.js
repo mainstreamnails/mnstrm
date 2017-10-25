@@ -7,27 +7,18 @@ $(window).on('load', function() {
 $(document).ready(function() {
     $('#hideMe').fadeOut(4000, function() {
 
-        TweenMax.set(container, { perspective: 500 });
+        TweenMax.set(container, { display: "block" });
 
-        // images from reddit/r/wallpapers
-        var urls = [
-                document.getElementById('hideMe').src
-            ],
-            image,
-            loaded = 0;
         // very quick and dirty hack to load and display the first image asap
-        images[0] = image = new Image();
+        image = new Image();
+        image.src = document.getElementById('hideMe').src;
+        loaded = 0;
         image.onload = function() {
             if (++loaded === 1) {
                 imagesLoaded();
-                for (var i = 1; i < 4; i++) {
-                    images[i] = image = new Image();
-
-                    image.src = urls[i];
-                }
             }
         };
-        image.src = urls[0];
+
     }); // 5 seconds x 1000 milisec = 5000 milisec
 });
 
@@ -56,47 +47,11 @@ var container = document.getElementById('container');
 
 var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
-var windowload = function() {
-    TweenMax.set(container, { perspective: 500 });
-
-    // images from reddit/r/wallpapers
-    var urls = [
-            document.getElementById('mn').src
-        ],
-        image,
-        loaded = 0;
-    // very quick and dirty hack to load and display the first image asap
-    images[0] = image = new Image();
-    image.onload = function() {
-        if (++loaded === 1) {
-            imagesLoaded().delay(5000);
-            for (var i = 1; i < 4; i++) {
-                images[i] = image = new Image();
-
-                image.src = urls[i];
-            }
-        }
-    };
-    image.src = urls[0];
-};
-
 function imagesLoaded() {
-    placeImage(false);
     triangulate();
     shatter();
 }
 
-function placeImage(transitionIn) {
-    image = images[imageIndex];
-
-    if (++imageIndex === images.length) imageIndex = 0;
-
-    image.addEventListener('click', imageClickHandler);
-
-    if (transitionIn !== false) {
-        TweenMax.fromTo(image, 0.75, { y: -1000 }, { y: 0, ease: Back.easeOut });
-    }
-}
 
 function imageClickHandler(event) {
     var box = image.getBoundingClientRect(),
@@ -114,8 +69,7 @@ function triangulate() {
     var rings = [
             { r: 50, c: 12 },
             { r: 150, c: 12 },
-            { r: 300, c: 12 },
-            { r: 1200, c: 12 } // very large in case of corner clicks
+            { r: 300, c: 12 }
         ],
         x,
         y,
@@ -182,8 +136,6 @@ function shatter() {
         container.appendChild(fragment.canvas);
     }
 
-    container.removeChild(image);
-    image.removeEventListener('click', imageClickHandler);
 }
 
 function shatterCompleteHandler() {

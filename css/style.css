@@ -241,6 +241,14 @@ a {
     color: white;
 }
 
+#container {
+    display: none;
+}
+
+#shatter {
+    display: none;
+}
+
 @media screen and (min-width: 375px) {
     .soon {
         font-size: 22px;
