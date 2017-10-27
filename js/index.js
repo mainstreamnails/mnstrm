@@ -8,11 +8,10 @@ $(document).ready(function() {
     $('#hideMe').fadeOut(4000, function() {
 
         TweenMax.set(container, { display: "block" });
-
+        loaded = 0;
         // very quick and dirty hack to load and display the first image asap
         image = new Image();
         image.src = document.getElementById('hideMe').src;
-        loaded = 0;
         image.onload = function() {
             if (++loaded === 1) {
                 imagesLoaded();
@@ -68,8 +67,10 @@ function imageClickHandler(event) {
 function triangulate() {
     var rings = [
             { r: 50, c: 12 },
+            { r: 100, c: 12 },
             { r: 150, c: 12 },
-            { r: 300, c: 12 }
+            { r: 200, c: 12 },
+            { r: 250, c: 12 }
         ],
         x,
         y,
@@ -81,7 +82,7 @@ function triangulate() {
     rings.forEach(function(ring) {
         var radius = ring.r,
             count = ring.c,
-            variance = radius * 0.25;
+            variance = radius;
 
         for (var i = 0; i < count; i++) {
             x = Math.cos((i / count) * TWO_PI) * radius + centerX + randomRange(-variance, variance);
