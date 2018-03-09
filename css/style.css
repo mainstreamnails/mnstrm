@@ -216,7 +216,6 @@ a {
     perspective: 600px;
     transform-style: preserve3d;
 }
-
 .nav-logo {
     position: absolute;
     z-index: 100;
@@ -228,7 +227,9 @@ a {
     font-size: 1.57143rem;
     line-height: 1
 }
-
+.slider-display-none {
+    opacity:0;
+}
 .page-hero .nav-logo {
     color: #fff
 }
@@ -345,6 +346,9 @@ img {
     height: 30px;
 }
 
+.nav > *{
+    z-index: 1;
+}
 .nav-work {
     top: 25px;
     right: 50px;

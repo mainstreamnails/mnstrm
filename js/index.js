@@ -24,9 +24,14 @@ $(document).ready(function() {
 setTimeout(resetCSS, 6800);
 
 function resetCSS() {
-    $('#close').fadeIn("slow");
+    $('#close').fadeIn("slow", function(){
+        sliderLoop();
+    });
 }
 
+function sliderLoop(){
+    $('#pediChair').animate({opacity: 1}, 3000);
+}
 // triangulation using https://github.com/ironwallaby/delaunay
 
 const TWO_PI = Math.PI * 2;
