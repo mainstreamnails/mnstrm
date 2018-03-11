@@ -277,12 +277,14 @@ img {
     height: 120%;
     position: absolute;
     width: 100%;
+    overflow: hidden;
    
 
 }
 @media (min-width: 1024px){
     #maniImg, #pediImg, #swarvoski, #mnstrmGear {
         width: 100%;
+        overflow: hidden;
     }
 }
 .halfofimg {
