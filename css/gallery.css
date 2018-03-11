@@ -194,29 +194,6 @@ a {
     color: white;
 }
 
-@media screen and (max-width: 599px) {
-    .nav-logo {
-        display: none
-    }
-    .page-hero .nav-logo {
-        display: inline-block
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 799px) {
-    .page-archive .nav-logo {
-        display: none
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .nav-logo {
-        left: 27px;
-        top: 25px;
-        font-size: 26px;
-        font-size: 1.85714rem
-    }
-}
 
 .nav-slogan {
     position: absolute;
@@ -230,17 +207,6 @@ a {
     text-transform: uppercase
 }
 
-@media screen and (min-width: 600px) {
-    .nav-slogan {
-        font-size: 11px;
-        font-size: 0.78571rem;
-        line-height: 1;
-        left: 100%;
-        margin-left: 18px;
-        top: 3px;
-        white-space: nowrap
-    }
-}
 
 img {
     width: 100%;
@@ -264,4 +230,107 @@ img {
 .no-gutter>[class*='col-'] {
     padding-right: 0;
     padding-left: 0;
+}
+
+
+/*** Media queries for adjusting to different screen sizes ***/
+
+
+@media screen and (min-width: 375px) {
+    .soon {
+        font-size: 22px;
+        font-size: 1rem
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mainstream {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mainstream {
+        font-size: 7px;
+    }
+}
+
+
+@media screen and (max-width: 599px) {
+    .page-hero .nav-logo {
+        display: inline-block
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .page-archive .nav-logo {
+        display: none
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nav-logo {
+        left: 27px;
+        top: 25px;
+        font-size: 26px;
+        font-size: 1.85714rem
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .nav-slogan {
+        font-size: 11px;
+        font-size: 0.78571rem;
+        line-height: 1;
+        left: 100%;
+        margin-left: 18px;
+        top: 3px;
+        white-space: nowrap
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .nav-about {
+        width: 24px;
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        left: 16px;
+        bottom: 23px
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .nav-about {
+        bottom: 16px
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .nav-about {
+        padding-top: 30px;
+        left: -44px;
+        top: 50%;
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        -ms-transform-origin: center top;
+        transform-origin: center top;
+        transition: transform 300ms
+    }
+    .nav-about:hover {
+        -ms-transform: rotate(-90deg) translateY(13px);
+        transform: rotate(-90deg) translateY(13px)
+    }
+    .nav-about::after {
+        top: calc(50% + 15px)
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .nav-about-line {
+        display: none
+    }
+    .nav-top-line {
+        display: none
+    }
 }

@@ -188,11 +188,15 @@ a {
     width: 20em;
 }
 
+.mainstreamnails{
+    width: 100%;
+}
 .logo {
     position: absolute;
     animation: logo 5s ease-in-out;
     animation-iteration-count: 1;
     top: 50%;
+    width: 100%;
 }
 
 
@@ -228,7 +232,10 @@ a {
     line-height: 1
 }
 .slider-display-none {
-    opacity:0;
+    display: none;
+}
+.current{
+    display:inline-block;
 }
 .page-hero .nav-logo {
     color: #fff
@@ -249,38 +256,6 @@ a {
 #shatter {
     display: none;
 }
-
-@media screen and (min-width: 375px) {
-    .soon {
-        font-size: 22px;
-        font-size: 1rem
-    }
-}
-
-@media screen and (max-width: 599px) {
-    .nav-logo {
-        display: none
-    }
-    .page-hero .nav-logo {
-        display: inline-block
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 799px) {
-    .page-archive .nav-logo {
-        display: none
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .nav-logo {
-        left: 27px;
-        top: 25px;
-        font-size: 26px;
-        font-size: 1.85714rem
-    }
-}
-
 .nav-slogan {
     position: absolute;
     font-size: 10px;
@@ -293,22 +268,23 @@ a {
     text-transform: uppercase
 }
 
-@media screen and (min-width: 600px) {
-    .nav-slogan {
-        font-size: 11px;
-        font-size: 0.78571rem;
-        line-height: 1;
-        left: 100%;
-        margin-left: 18px;
-        top: 3px;
-        white-space: nowrap
+img {
+   
+}
+
+#maniImg, #pediImg, #swarvoski, #mnstrmGear {
+    
+    height: 120%;
+    position: absolute;
+    width: 100%;
+   
+
+}
+@media (min-width: 1024px){
+    #maniImg, #pediImg, #swarvoski, #mnstrmGear {
+        width: 100%;
     }
 }
-
-img {
-    width: 100%;
-}
-
 .halfofimg {
     width: 20%;
 }
@@ -364,6 +340,10 @@ img {
     letter-spacing: 0.11em;
     font-weight: 700;
 }
+.nav-gallery{
+    position: relative;
+    left: 50%;
+}
 
 .link-brand-inner {
     color: white
@@ -388,6 +368,80 @@ img {
     color: white;
     background-color: currentColor;
     height: 10px;
+}
+
+.mid-nav {
+    position: absolute;
+    top: 50%;
+}
+
+
+/* General styles and layout */
+
+body {
+    background: black;
+    /*url(https://i.imgur.com/3nM3maK.jpg);*/
+    overflow: hidden;
+}
+
+
+/*** Media queries for adjusting to different screen sizes ***/
+
+@media only screen and (min-width: 600px) {
+    .mainstream {
+        font-size: 10px;
+    }
+}
+
+
+
+@media screen and (min-width: 375px) {
+    .mainstream {
+        font-size: 7px;
+    }
+   
+    .soon {
+        font-size: 22px;
+        font-size: 1rem
+    }
+
+    .current{
+    
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .page-hero .nav-logo {
+        display: inline-block
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .page-archive .nav-logo {
+        display: none
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nav-logo {
+        left: 27px;
+        top: 25px;
+        font-size: 26px;
+        font-size: 1.85714rem
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .nav-slogan {
+        font-size: 11px;
+        font-size: 0.78571rem;
+        line-height: 1;
+        left: 100%;
+        margin-left: 18px;
+        top: 3px;
+        white-space: nowrap
+    }
 }
 
 @media screen and (max-width: 599px) {
@@ -432,34 +486,5 @@ img {
     }
     .nav-top-line {
         display: none
-    }
-}
-
-.mid-nav {
-    position: absolute;
-    top: 50%;
-}
-
-
-/* General styles and layout */
-
-body {
-    background: black;
-    /*url(https://i.imgur.com/3nM3maK.jpg);*/
-    overflow: hidden;
-}
-
-
-/*** Media queries for adjusting to different screen sizes ***/
-
-@media only screen and (max-width: 600px) {
-    .mainstream {
-        font-size: 10px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .mainstream {
-        font-size: 7px;
     }
 }

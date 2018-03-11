@@ -25,13 +25,20 @@ setTimeout(resetCSS, 6800);
 
 function resetCSS() {
     $('#close').fadeIn("slow", function(){
-        sliderLoop();
+        setInterval(loop, 5000);
     });
-}
+    }
 
-function sliderLoop(){
-    $('#pediChair').animate({opacity: 1}, 3000);
-}
+    function loop() {
+        $(".set").each(function() {
+            var current = $(this).children(".current").removeClass("current");
+            var i = current.next().length ? current.index() : 0;
+            current.siblings(":eq(" + i + ")").addClass("current");
+        });
+    }
+    
+
+
 // triangulation using https://github.com/ironwallaby/delaunay
 
 const TWO_PI = Math.PI * 2;
